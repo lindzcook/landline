@@ -1,3 +1,4 @@
+This version of landline makes maps completely in JavaScript without HTML or CSS files. Useful for content management systems that don't accept HTML/CSS files and only accept JS files.    
                                                                        
     _/                                  _/  _/  _/                     
    _/          _/_/_/  _/_/_/      _/_/_/  _/      _/_/_/      _/_/    
