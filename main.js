@@ -1,6 +1,18 @@
-     
-     
       $(function() {
+      
+      //inject divs 
+      $("#map").prepend('<div id="landline_container"></div><div id="landline_tooltip"></div>');
+      
+      //define custom styling
+      var styles = {
+      	title: "",
+      	colors: "",
+      	categories: "",
+      	legendLabel: "",
+      	toolTipFigure: "",
+      	toolTipLabel: ""
+      };
+      
         // Initialize the map
        	console.log('inside main.js');
        	
@@ -47,12 +59,6 @@
           return "rgb(0,109,44)";
         };
         
-        //make the legend
-        $("body").prepend('<strong>Legend</strong><br>');
-        
-        
-        "width:500px;height:100px;border:1px solid #000;"
-
         var commaDelimit = function(a){
           return _.isNumber(a) ? a.toString().replace(/(d)(?=(ddd)+(?!d))/g,"$1,") : "";
         };
@@ -69,4 +75,8 @@
 
         // Draw the map
         map.createMap();
+        
+            //make the legend
+        $("body").append('<p id="legend"><strong>Legend</strong></p><br><style></style><svg width="50" height="50"><rect width="50" height="50" style="fill:rgb(237,248,233);"/></svg><svg width="50" height="50"><rect width="50" height="50" style="fill:rgb(186,228,179);"/></svg><svg width="50" height="50"><rect width="50" height="50" style="fill:rgb(116,196,118);"/></svg><svg width="50" height="50"><rect width="50" height="50" style="fill:rgb(49,163,84);"/></svg><svg width="50" height="50"><rect width="50" height="50" style="fill:rgb(0,109,44);"/></svg>');
+        
       });
